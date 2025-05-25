@@ -35,3 +35,18 @@ export interface Video {
   }[];
   userId: string;
 }
+
+// export interface User {
+//   _id: string;
+//   name: string;
+//   image: string;
+//   // Add other user properties from your Sanity schema if needed
+// }
+
+export interface AuthStore {
+  userProfile: IUser | null;
+  allUsers: IUser[];
+  addUser: (user: IUser) => void;
+  removeUser: () => void;
+  fetchAllUsers: () => Promise<void>;
+}

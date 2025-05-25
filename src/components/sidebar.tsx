@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { AiFillHome, AiOutlineMenu } from 'react-icons/ai';
 import { ImCancelCircle } from 'react-icons/im';
 import Discover from './discover';
-// import SuggestedAccounts from './suggestedAccount';
 import Footer from './footer';
 import { usePathname } from 'next/navigation';
+import SuggestedAccounts from './suggestedAccount';
+import useAuthStore from '@/store/authStore';
 
 
 
@@ -18,6 +19,8 @@ const Sidebar: NextPage = () => {
 
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
   const pathname = usePathname();
+
+   const { fetchAllUsers, allUsers } = useAuthStore();
 
   return (
     <div>
@@ -43,10 +46,10 @@ const Sidebar: NextPage = () => {
           </div>
 
           <Discover />
-          {/* <SuggestedAccounts
+          <SuggestedAccounts
             fetchAllUsers={fetchAllUsers}
             allUsers={allUsers}
-          /> */}
+          />
           <Footer />
         </div>
       )}

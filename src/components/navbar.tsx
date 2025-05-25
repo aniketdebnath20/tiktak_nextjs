@@ -2,13 +2,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
-import Logo from '../../../public/ChatGPT Image May 18, 2025, 01_53_52 PM.png';
-import { IUser } from '@/types';
+import Logo from '../../public/ChatGPT Image May 18, 2025, 01_53_52 PM.png';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdAdd } from 'react-icons/io';
 import { AiOutlineLogout } from 'react-icons/ai';
 import { GoogleLogin, googleLogout } from '@react-oauth/google';
 import { useRouter } from 'next/navigation';
+import { IUser } from '@/types';
 
 const Navbar = () => {
     const [user, setUser] = useState<IUser | null>();
@@ -49,6 +49,7 @@ const Navbar = () => {
                         placeholder='Search accounts and videos'
                     />
                     <button
+                    
                         onClick={handleSearch}
                         className='absolute md:right-5 right-6 top-4 border-l-2 border-gray-300 pl-4 text-2xl text-gray-400'
                     >
