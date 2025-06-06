@@ -13,7 +13,7 @@ import useAuthStore from '@/store/authStore';
 
 
 const normalLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded';
-const activeLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text- [#F51997] rounded';
+const activeLink = 'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#3B82F6] rounded';
 
 const Sidebar: NextPage = () => {
 
